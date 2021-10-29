@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "aa1f5bf847d71fab87e1a5236122bdec",
+    "content-hash": "27e6c737e2be514dc506a7a30ed0447d",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1117,23 +1117,23 @@
         },
         {
             "name": "infyomlabs/laravel-ui-adminlte",
-            "version": "v3.1.1",
+            "version": "v3.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/InfyOmLabs/laravel-ui-adminlte.git",
-                "reference": "6e68279677d0f0bb766928d5d2e629a3157fb9e3"
+                "reference": "32448a630e5eea1f8a48c6aa025c564b96138c3b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/InfyOmLabs/laravel-ui-adminlte/zipball/6e68279677d0f0bb766928d5d2e629a3157fb9e3",
-                "reference": "6e68279677d0f0bb766928d5d2e629a3157fb9e3",
+                "url": "https://api.github.com/repos/InfyOmLabs/laravel-ui-adminlte/zipball/32448a630e5eea1f8a48c6aa025c564b96138c3b",
+                "reference": "32448a630e5eea1f8a48c6aa025c564b96138c3b",
                 "shasum": ""
             },
             "require": {
                 "illuminate/support": "^8.0",
                 "infyomlabs/laravel-generator-helpers": "^3.0",
                 "laravel/ui": "^3.0",
-                "php": "^7.3"
+                "php": "^7.3|^8.0"
             },
             "type": "library",
             "extra": {
@@ -1167,15 +1167,15 @@
             ],
             "support": {
                 "issues": "https://github.com/InfyOmLabs/laravel-ui-adminlte/issues",
-                "source": "https://github.com/InfyOmLabs/laravel-ui-adminlte/tree/v3.1.1"
+                "source": "https://github.com/InfyOmLabs/laravel-ui-adminlte/tree/v3.2.0"
             },
             "funding": [
                 {
                     "url": "https://opencollective.com/infyomlabs",
-                    "type": "open_collective"
+                    "type": "opencollective"
                 }
             ],
-            "time": "2021-07-07T11:00:40+00:00"
+            "time": "2021-10-11T04:17:37+00:00"
         },
         {
             "name": "laravel/fortify",

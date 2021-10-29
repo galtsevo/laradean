@@ -28,3 +28,7 @@ Route::resource('marksheet', \App\Http\Controllers\StudentController::class);
 //Route::get('autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
 
 Route::get('search', [Search::class, 'render'])->name('search');
+
+//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+//Auth::routes();
