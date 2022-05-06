@@ -1,3 +1,4 @@
+
 <div>
     <div class="row mb-4">
         <div class="col-md-12">
@@ -73,14 +74,27 @@
                         <td>{{$user->Specyal}}</td>
                         <td>{{$user->FakultetName}}</td>
                         <td>
-                            <button class="btn btn-sm btn-danger" wire:click="$emit('deleteTriggered', {{ $user->CodePhysPerson }}, {{ $user->Zathetka }}, '{{ $user->Name }}')">
+                            {{--<button class="btn btn-sm btn-danger" wire:click="$emit('deleteTriggered', {{ $user->CodePhysPerson }}, {{ $user->Zathetka }}, '{{ $user->Name }}')">--}}
+                                {{--More--}}
+                            {{--</button>--}}
+                            <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#user-modal2">
                                 More
                             </button>
+
+
+
                         </td>
                         <td>
-                            <button class="btn btn-sm btn-dark" wire:click="$emitTo('triggerCreate')">
-                                Edit
-                            </button>
+                            {{--<button class="btn btn-sm btn-dark" wire:click="$emit('triggerCreate')">--}}
+                                {{--Edit--}}
+                            {{--</button>--}}
+
+                            {{--<button onclick="Livewire.emit('openModal', 'user-form')">Edit User</button>--}}
+
+                            {{--<button wire:click="$emit('openModal', 'user-form')">Edit User</button>--}}
+
+                            <button class="btn btn-sm btn-dark" onclick="Livewire.emit('openModal', 'user-form')">Open Modal</button>
+
                         </td>
                     </tr>
                 @endforeach

@@ -6,9 +6,10 @@
 //     }
 // });
 
-Livewire.on("triggerCreate", () => {
-    $("#user-modal").modal("show");
-});
+// Livewire.on("triggerCreate", () => {
+//      console.log('sdcsdc');
+//      $("#user-modal").modal("show");
+// });
 
 // window.addEventListener("user-saved", (event) => {
 //     $("#user-modal").modal("hide");

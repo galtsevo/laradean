@@ -15,7 +15,13 @@
 
     @stack('page_css')
 
+    <!-- Styles -->
+    <link href="css/tailwind.min.css" rel="stylesheet">
+
     @livewireStyles
+    <!-- Scripts -->
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -92,6 +98,9 @@
 
 @stack('page_scripts')
 
+
+
+@livewire('livewire-ui-modal')
 @livewireScripts
 {{--<script src="{{ asset('js/app.js') }}"></script>--}}
 </body>

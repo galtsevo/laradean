@@ -13,7 +13,16 @@ class Search extends Component
     public $searchTerm;
     public $users;
 
-    protected $listeners = ['delete', 'triggerRefresh' => '$refresh'];
+    public $show = false;
+
+    protected $listeners = [
+        'show' => 'show'
+    ];
+
+    public function show()
+    {
+        $this->show = true;
+    }
 
 
     public function sortBy($field)
@@ -27,12 +36,7 @@ class Search extends Component
         $this->sortField = $field;
     }
 
-    public function delete($Zathetka)
-    {
-        echo '111';
-//        User::find($id)
-//            ->delete();
-    }
+
 
     public function render()
     {
