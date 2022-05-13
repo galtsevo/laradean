@@ -32,3 +32,20 @@ Route::get('search', [Search::class, 'render'])->name('search');
 //Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 //Auth::routes();
+Route::get('/Student', function () {
+    return view('welcomeStudent');})->name('Student');
+
+Route::get('/Teacher', function () {
+    return view('welcomeTeacher');
+})->name('Teacher');
+
+// Route::resource('/ScheduleTeacher','ScheduleController')->names('ScheduleTeacher');
+
+Route::get('/room', function () {
+    return view('welcomeRoom');
+})->name('room');
+
+
+Route::fallback(function () {
+    return 'Резервный маршрут';
+});

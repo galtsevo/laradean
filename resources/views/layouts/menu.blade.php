@@ -28,7 +28,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{ route('Student') }}" class="nav-link">
                 <i class="nav-icon fas fa-calendar"></i>
                 <p>Расписание занятий</p>
             </a>
