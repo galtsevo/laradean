@@ -76,6 +76,6 @@ class ScheduleRoom extends Component
 
     public function render()
     {
-        return view('livewire.room');
+        return view('livewire.schedule-room');
     }
 }

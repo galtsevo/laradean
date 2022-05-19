@@ -44,7 +44,7 @@ class Search extends Component
 
         $student= new Student;
         $this->users = $student->search_student($searchTerm, $this->sortField, $this->sortAsc ? 'asc' : 'desc', $limit = 10);
-
+//var_dump($this->users);
         return view('livewire.search');
     }
 }

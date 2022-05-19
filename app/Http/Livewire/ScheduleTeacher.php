@@ -88,6 +88,6 @@ class ScheduleTeacher extends Component
 
     public function render()
     {
-        return view('livewire.teacher');
+        return view('livewire.schedule-teacher');
     }
 }

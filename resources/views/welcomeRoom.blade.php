@@ -9,18 +9,21 @@
         <div class="card-header">
             <nav role='navigation' class="transformer-tabs">
                 <ul class="nav nav-tabs" id="myTab" style="margin-bottom: 20px;">
-                    <li class="nav-item ">
-                        <a class="nav-link " href="{{ route('Student') }}" data-toggle="tab">Расписание занятий студентов</a>
-                    </li>
-                    <li class="nav-item ">
-                        <a class="nav-link " href="{{ route('Teacher') }}" data-toggle="tab">Расписание преподавателей</a>
-                    </li>
                     <li class="nav-item active">
-                        <a class="nav-link active" href="{{ route('room') }}" data-toggle="tab">Расписание занятий в аудиториях</a>
+                        {{--                        <a class="nav-link " href="{{ route('Student') }}" data-toggle="tab">Расписание занятий студентов</a>--}}
+                        <a class="nav-link " href="{{ route('Student') }}">Расписание занятий студентов</a>
+                    </li>
+                    <li class="nav-item">
+                        {{--                        <a class="nav-link active" href="{{ route('Teacher') }}" data-toggle="tab">Расписание преподавателей</a>--}}
+                        <a class="nav-link" href="{{ route('Teacher') }}">Расписание преподавателей</a>
+                    </li>
+                    <li class="nav-item">
+                        {{--                        <a class="nav-link" href="{{ route('room') }}" data-toggle="tab">Расписание занятий в аудиториях</a>--}}
+                        <a class="nav-link active" href="{{ route('room') }}">Расписание занятий в аудиториях</a>
                     </li>
                 </ul>
            </nav>
-            @livewire('room')
+            @livewire('schedule-room')
         </div>
     </div>
 
@@ -77,21 +80,21 @@
                 </div>
             </div>
         </div>
-        @livewireScripts
+{{--        @livewireScripts--}}
 
-        </body>
+{{--        </body>--}}
 
-        <footer class="container">
-            <span class="transformer-tabs">
-                <a href="http://www.bsu.edu.ru/bsu/structure/detail.php?ID=2263">Ресурс департамента образовательной политики</a>
-                <br>Разработка и техническая поддержка: E-mail:
-                <a href="mailto:DekanatAdm@bsu.edu.ru?subject=ИнфоБелГУ 2013">DekanatAdm@bsu.edu.ru</a>
-            </span>
-            </div>
-        </footer>
+{{--        <footer class="container">--}}
+{{--            <span class="transformer-tabs">--}}
+{{--                <a href="http://www.bsu.edu.ru/bsu/structure/detail.php?ID=2263">Ресурс департамента образовательной политики</a>--}}
+{{--                <br>Разработка и техническая поддержка: E-mail:--}}
+{{--                <a href="mailto:DekanatAdm@bsu.edu.ru?subject=ИнфоБелГУ 2013">DekanatAdm@bsu.edu.ru</a>--}}
+{{--            </span>--}}
+{{--            </div>--}}
+{{--        </footer>--}}
 
 
-        </html>
+{{--        </html>--}}
 
 
 @endsection

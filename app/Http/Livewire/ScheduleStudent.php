@@ -100,7 +100,7 @@ class ScheduleStudent extends Component
 
     public function render()
     {
-        return view('livewire.student');
+        return view('livewire.schedule-student');
     }
 }
 

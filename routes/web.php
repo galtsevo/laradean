@@ -29,9 +29,8 @@ Route::resource('marksheet', \App\Http\Controllers\StudentController::class);
 
 Route::get('search', [Search::class, 'render'])->name('search');
 
-//Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+//Route::resource('student', \App\Http\Controllers\StudentController::class);
 
-//Auth::routes();
 Route::get('/Student', function () {
     return view('welcomeStudent');})->name('Student');
 
@@ -39,13 +38,24 @@ Route::get('/Teacher', function () {
     return view('welcomeTeacher');
 })->name('Teacher');
 
-// Route::resource('/ScheduleTeacher','ScheduleController')->names('ScheduleTeacher');
+ Route::resource('/ScheduleTeacher','ScheduleController')->names('ScheduleTeacher');
 
-Route::get('/room', function () {
+Route::get('/Room', function () {
     return view('welcomeRoom');
 })->name('room');
 
 
 Route::fallback(function () {
     return 'Резервный маршрут';
+});
+
+Route::get('/clear', function() {
+
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+
+    return "Cleared!";
+
 });

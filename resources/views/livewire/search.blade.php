@@ -14,46 +14,46 @@
                 <thead>
                 <tr>
                     <th>
-                        <a wire:click.prevent="sortBy('Name')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('Name')" role="button" href="#">--}}
                             Name
-                            @include('includes.sort-icon', ['field' => 'Name'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'Name'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
-                        <a wire:click.prevent="sortBy('CodePhysPerson')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('CodePhysPerson')" role="button" href="#">--}}
                             CodePhysPerson
-                            @include('includes.sort-icon', ['field' => 'CodePhysPerson'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'CodePhysPerson'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
-                        <a wire:click.prevent="sortBy('Zathetka')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('Zathetka')" role="button" href="#">--}}
                             Zathetka
-                            @include('includes.sort-icon', ['field' => 'Zathetka'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'Zathetka'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
-                        <a wire:click.prevent="sortBy('Kvalif')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('Kvalif')" role="button" href="#">--}}
                             Kvalif
-                            @include('includes.sort-icon', ['field' => 'Kvalif'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'Kvalif'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
-                        <a wire:click.prevent="sortBy('Otdelenie')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('Otdelenie')" role="button" href="#">--}}
                             Otdelenie
-                            @include('includes.sort-icon', ['field' => 'Otdelenie'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'Otdelenie'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
-                        <a wire:click.prevent="sortBy('Specyal')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('Specyal')" role="button" href="#">--}}
                             Specyal
-                            @include('includes.sort-icon', ['field' => 'Specyal'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'Specyal'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
-                        <a wire:click.prevent="sortBy('FakultetName')" role="button" href="#">
+{{--                        <a wire:click.prevent="sortBy('FakultetName')" role="button" href="#">--}}
                             FakultetName
-                            @include('includes.sort-icon', ['field' => 'FakultetName'])
-                        </a>
+{{--                            @include('includes.sort-icon', ['field' => 'FakultetName'])--}}
+{{--                        </a>--}}
                     </th>
                     <th>
                         Delete
@@ -74,27 +74,27 @@
                         <td>{{$user->Specyal}}</td>
                         <td>{{$user->FakultetName}}</td>
                         <td>
-                            {{--<button class="btn btn-sm btn-danger" wire:click="$emit('deleteTriggered', {{ $user->CodePhysPerson }}, {{ $user->Zathetka }}, '{{ $user->Name }}')">--}}
-                                {{--More--}}
-                            {{--</button>--}}
+                            <button class="btn btn-sm btn-danger" wire:click="$emit('deleteTriggered', {{ $user->CodePhysPerson }}, {{ $user->Zathetka }}, '{{ $user->Name }}')">
+                                More
+                            </button>
                             <button type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#user-modal2">
                                 More
                             </button>
-
-
-
+{{----}}
+{{----}}
+{{----}}
                         </td>
                         <td>
-                            {{--<button class="btn btn-sm btn-dark" wire:click="$emit('triggerCreate')">--}}
-                                {{--Edit--}}
-                            {{--</button>--}}
-
-                            {{--<button onclick="Livewire.emit('openModal', 'user-form')">Edit User</button>--}}
-
-                            {{--<button wire:click="$emit('openModal', 'user-form')">Edit User</button>--}}
-
+                            <button class="btn btn-sm btn-dark" wire:click="$emit('triggerCreate')">
+                                Edit
+                            </button>
+{{----}}
+                            <button onclick="Livewire.emit('openModal', 'user-form')">Edit User</button>
+{{----}}
+                            <button wire:click="$emit('openModal', 'user-form')">Edit User</button>
+{{----}}
                             <button class="btn btn-sm btn-dark" onclick="Livewire.emit('openModal', 'user-form')">Open Modal</button>
-
+{{----}}
                         </td>
                     </tr>
                 @endforeach

@@ -6,7 +6,6 @@
                 <select wire:model="departcheck" class="form-select form-select-sm min-width"
                         aria-label=".form-select-sm example" style="margin-bottom: 5px;width: auto">
                     <option>Выберите факультет</option>
-
                     @foreach ($departmentname as $key=> $item)
                         <option value={{$key}}>{{$item}}</option>
                     @endforeach
