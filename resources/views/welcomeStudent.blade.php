@@ -30,12 +30,12 @@
 
       //  echo ($this->full_schedule[0]['weekday']);
 
-echo '<pre>';
-echo '$todate '.$todate;
-echo '<br>';
-echo '$leftdate '.$leftdate;
-echo '<br>';
-echo '$rightdate '.$rightdate;
+//echo '<pre>';
+//echo '$todate '.$todate;
+//echo '<br>';
+//echo '$leftdate '.$leftdate;
+//echo '<br>';
+//echo '$rightdate '.$rightdate;
 
 
 //print_r($full_room);
