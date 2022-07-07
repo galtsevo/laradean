@@ -23,6 +23,7 @@ class ScheduleStudent extends Component
     public $full_schedulecheck = [];
     public $groupsearch;
     public $check;
+    public $response;
 
     public function boot()
     {
@@ -83,10 +84,11 @@ class ScheduleStudent extends Component
 
     public function groupsearchclick()
     {
+        $this->date_today = date('d.m.Y', time());
         $this->check = '';
         $this->testhuk = $this->groupsearch;
         $import = new ImportDataClient();
-        $response = $import->client->request('GET', 'readStudent.php?os=android&group=' . $this->groupsearch . '&date=04.04.2022&period=5');
+        $response = $import->client->request('GET', 'readStudent.php?os=android&group=' . $this->groupsearch . '&date='.$this->date_today);
         $data = json_decode($response->getBody());
 
         if (isset($data->schedule)) {

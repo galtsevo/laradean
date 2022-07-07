@@ -2,6 +2,47 @@
 
 @section('content')
 
+    @php
+        use App\Components\ImportDataClient;
+        $import = new ImportDataClient();
+
+        $period = 3;
+        $todate = time(); //;1622408400 1653637198
+        $leftdate = $todate - $period*24*60*60;
+        $rightdate =$todate + $period*24*60*60;
+
+//$response = $import->client->request('GET', 'readTeacher.php?dep=11200');
+//$data = json_decode($response->getBody(),true);
+
+//                $response = $import->client->request('GET', 'readRoom.php?area=42&build=165&room=7054&date=04.05.2022');
+//        $full_room = json_decode($response->getBody(),true);
+
+//$full_room = array_values( $full_room);
+
+   //     if(isset($this->full_teachid['0'])){
+    //        $check = $this->full_teachid['0'];}else{
+     //       $this->full_teachid = $full_teachid  ;
+   //     }
+
+      //  for ($i = 0; $i < count($data->schedule); $i++) {
+      //      $this->full_schedule[] = (array)$data->schedule[$i];
+      //  }
+
+      //  echo ($this->full_schedule[0]['weekday']);
+
+//echo '<pre>';
+//echo '$todate '.$todate;
+//echo '<br>';
+//echo '$leftdate '.$leftdate;
+//echo '<br>';
+//echo '$rightdate '.$rightdate;
+
+
+//print_r($full_room);
+echo '</pre>';
+
+
+    @endphp
 
     <div class="container">
         <div class="card-header">

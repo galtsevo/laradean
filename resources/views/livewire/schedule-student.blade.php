@@ -54,7 +54,7 @@
         </div>
     </div>
     <pre>
-     <center><h3>{{ $check }}</h3></center>
+     <center><h4>{{ $check }}</h4></center>
 </pre>
     <table class="table table-bordered table-striped">
         @for($i = 0; $i < count($full_schedule); $i++)
@@ -75,7 +75,7 @@
 </div>
 <?php
     //echo ($this->full_schedule[0]['weekday']);
-      // print_r($full_schedule);
+     //  print_r($response);
         ?>
 
 {{--        @foreach($full_schedule as  $sfull)--}}

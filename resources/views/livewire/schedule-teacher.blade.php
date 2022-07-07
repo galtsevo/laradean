@@ -1,5 +1,8 @@
 <div>
     <div class="container">
+        <div class="row">
+
+            <div class="col-md-auto">
         <select wire:model="departcheck" class="form-select form-select-sm min-width"
                 aria-label=".form-select-sm example" style="margin-bottom: 5px;width: auto">
             <option>Выберите факультет</option>
@@ -9,7 +12,9 @@
             @endforeach
 
         </select>
+            </div>
 
+            <div class="col-md-auto">
         <select wire:model="subdepcheck" class="form-select form-select-sm min-width"
                 aria-label=".form-select-sm example" style="margin-bottom: 5px;width: auto;">
 
@@ -20,7 +25,9 @@
             @endforeach
 
         </select>
+            </div>
 
+            <div class="col-md-auto">
         <select wire:model="teachidcheck" class="form-select form-select-sm" aria-label=".form-select-sm example"
                 style="margin-bottom: 5px;width: auto;">
 
@@ -32,9 +39,10 @@
 
         </select>
     </div>
-
+        </div>
+        <pre>
 <center><h4>{{ $check }}</h4></center>
-
+        </pre>
     <table class="table table-bordered table-striped">
         @for($i = 0; $i < count($full_teachidcheck); $i++)
             <tr>
