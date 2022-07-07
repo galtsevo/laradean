@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\DB;
 class StartPage extends Model
 {
 
-    public function get_top_news($limit){
+    public static function get_top_news($limit){
 
         $search_student = DB::connection('mysql2')
             ->select("SELECT * from mdl_forum_discussions d
