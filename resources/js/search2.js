@@ -11,7 +11,7 @@ $('.selections').on('change','#selector', function(){
         }
     }
 
-    $.get("http://local.dekanat.bsu.edu.ru/blocks/bsu_api/students.php/search?q=" +
+    $.get("https://dekanat.bsu.edu.ru/blocks/bsu_api/students.php/search?q=" +
         $('.selections').children('#selector').val()+"&page[number]="+pageId+"&page[size]=10", function (data) {
         if(pageId === 1){
             j = 0;
@@ -57,7 +57,7 @@ $('.selections').on('click','#right', function() {
         }
     }
 
-    $.get("http://local.dekanat.bsu.edu.ru/blocks/bsu_api/students.php/search?q=" +
+    $.get("https://dekanat.bsu.edu.ru/blocks/bsu_api/students.php/search?q=" +
         $('.selections').children('#selector').val()+"&page[number]="+pageId+"&page[size]=10", function (data) {
         if(pageId === 1){
             j = 0;
@@ -109,7 +109,7 @@ $('.selections').on('click','#left', function() {
         }
     }
 
-    $.get("http://local.dekanat.bsu.edu.ru/blocks/bsu_api/students.php/search?q=" +
+    $.get("https://dekanat.bsu.edu.ru/blocks/bsu_api/students.php/search?q=" +
         $('.selections').children('#selector').val()+"&page[number]="+pageId+"&page[size]=10", function (data) {
         if(pageId === 1){
             j = 0;

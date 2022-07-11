@@ -64,7 +64,7 @@ $('.selections').on('change','#term', function(){
     $('h1, h2, table, tbody, tr, th, td, br').remove();
     try {
         term = $('.selections').children('#term').val();
-        $.get("http://local.dekanat.bsu.edu.ru/blocks/bsu_api/marksheets.php/" + groupname + "/" + marksheetname + "?term=" + term, function (data) {
+        $.get("https://dekanat.bsu.edu.ru/blocks/bsu_api/marksheets.php/" + groupname + "/" + marksheetname + "?term=" + term, function (data) {
             let marksheet = data;
             let tempText = "<h1>Зачётная книжка</h1><br><h2>Теоретический курс</h2>" +
                 "<table id='exams'>" +
