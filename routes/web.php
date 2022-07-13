@@ -24,7 +24,7 @@ Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name(
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('marksheet', \App\Http\Controllers\TeacherLoadController::class);
+Route::resource('marksheet', \App\Http\Controllers\StudentController::class);
 
 //Route::get('search', [SearchController::class, 'index'])->name('search');
 //Route::get('autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
