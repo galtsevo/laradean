@@ -24,7 +24,7 @@ Route::get('/', [App\Http\Controllers\WelcomeController::class, 'index'])->name(
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-Route::resource('marksheet', \App\Http\Controllers\StudentController::class);
+Route::resource('marksheet', \App\Http\Controllers\TeacherLoadController::class);
 
 //Route::get('search', [SearchController::class, 'index'])->name('search');
 //Route::get('autocomplete', [SearchController::class, 'autocomplete'])->name('autocomplete');
@@ -46,9 +46,17 @@ Route::get('/Room', function () {
     return view('welcomeRoom');
 })->name('room');
 
-Route::get('/Marksheet', 'MarksheetController@index');
+Route::get('/Marksheet', function () {
+    return view('marksheet');
+});
 
-Route::get('/Search2', 'Search2Controller@index');
+Route::get('/Search2', function () {
+    return view('search2');
+});
+
+Router::get('/TeacherLoad', function () {
+    return view('teacherLoad');
+});
 
 Route::fallback(function () {
     return 'Резервный маршрут';
