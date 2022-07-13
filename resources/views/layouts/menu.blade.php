@@ -21,7 +21,7 @@
         {{--<p>Students</p>--}}
         {{--</a>--}}
         <li class="nav-item">
-            <a href="{{ route('search') }}" class="nav-link">
+            <a href="{{ route('Search2') }}" class="nav-link">
                 <i class="nav-icon fas fas fa-search"></i>
                 <p>Поиск студента</p>
             </a>
@@ -56,7 +56,7 @@
         </li>
 
         <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{route('Marksheet')}}" class="nav-link">
                 <i class="nav-icon fas fa-bookmark"></i>
                 <p>Зачетная книжка</p>
             </a>
