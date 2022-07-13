@@ -85,29 +85,50 @@ $('.selections').on('change','#term', function(){
                     tempText += new Date(mark[0]['date'] * 1000).toLocaleDateString("ru-RU") + '</td></tr>';
                 }
             }
-            tempText += "</table><br><br><h2>Практический курс</h2>";
+            tempText += "</table>";
             $(".container").append(tempText);
-            tempText =
-                "<table id='credits'>" +
-                "<tr><th>№ п/п</th><th>Дисциплина</th><th>Семестр</th><th>Объём часов</th><th>Преподаватель</th><th>Экзаменац. отметки</th><th>Дата сдачи</th></tr>";
-            for (let i = 0; i < marksheet['credits'].length; i++) {
-                tempText += "<tr>" +
-                    "<td>" + parseInt(i + 1) + "</td>" +
-                    "<td>" + marksheet['credits'][i]['name'] + "</td>" +
-                    "<td>" + marksheet['credits'][i]['term'] + "</td>" +
-                    "<td>" + marksheet['credits'][i]['hours'] + "</td><td>";
-                marksheet['credits'][i]['teachers'].forEach(teacher => tempText += teacher['name'] + ',<br>');
-                tempText = tempText.slice(0, -5);
-                let mark = marksheet['credits'][i]['marks'];
-                if (mark == null) {
-                    tempText += '</td><td></td><td></td></tr>';
-                } else {
-                    tempText += '</td><td>' + switchMark(mark[0]['mark']) + '</td><td>';
-                    tempText += new Date(mark[0]['date'] * 1000).toLocaleDateString("ru-RU") + '</td></tr>';
+            if (marksheet['credits'].length !== 0) {
+                tempText =
+                    "<br><br><h2>Практический курс</h2><table id='credits'>" +
+                    "<tr><th>№ п/п</th><th>Дисциплина</th><th>Семестр</th><th>Объём часов</th><th>Преподаватель</th><th>Экзаменац. отметки</th><th>Дата сдачи</th></tr>";
+                let index;
+                for (index = 0; index < marksheet['credits'].length; index++) {
+                    tempText += "<tr>" +
+                        "<td>" + parseInt(index + 1) + "</td>" +
+                        "<td>" + marksheet['credits'][index]['name'] + "</td>" +
+                        "<td>" + marksheet['credits'][index]['term'] + "</td>" +
+                        "<td>" + marksheet['credits'][index]['hours'] + "</td><td>";
+                    marksheet['credits'][index]['teachers'].forEach(teacher => tempText += teacher['name'] + ',<br>');
+                    tempText = tempText.slice(0, -5);
+                    let mark = marksheet['credits'][index]['marks'];
+                    if (mark == null) {
+                        tempText += '</td><td></td><td></td></tr>';
+                    } else {
+                        tempText += '</td><td>' + switchMark(mark[0]['mark']) + '</td><td>';
+                        tempText += new Date(mark[0]['date'] * 1000).toLocaleDateString("ru-RU") + '</td></tr>';
+                    }
                 }
+                if (marksheet['diffcredits'].length !== 0) {
+                    for (let i = 0; i < marksheet['diffcredits'].length; i++) {
+                        tempText += "<tr>" +
+                            "<td>" + (i + 1 + index) + "</td>" +
+                            "<td>" + marksheet['diffcredits'][i]['name'] + "</td>" +
+                            "<td>" + marksheet['diffcredits'][i]['term'] + "</td>" +
+                            "<td>" + marksheet['diffcredits'][i]['hours'] + "</td><td>";
+                        marksheet['diffcredits'][i]['teachers'].forEach(teacher => tempText += teacher['name'] + ',<br>');
+                        tempText = tempText.slice(0, -5);
+                        let mark = marksheet['diffcredits'][i]['marks'];
+                        if (mark == null) {
+                            tempText += '</td><td></td><td></td></tr>';
+                        } else {
+                            tempText += '</td><td>' + switchMark(mark[0]['mark']) + '</td><td>';
+                            tempText += new Date(mark[0]['date'] * 1000).toLocaleDateString("ru-RU") + '</td></tr>';
+                        }
+                    }
+                }
+                tempText += '</table>';
+                $(".container").append(tempText);
             }
-            tempText += '</table>';
-            $(".container").append(tempText);
             if (marksheet['practice'].length !== 0) {
                 tempText = "<br><br><h2>Практика</h2><table id='practice'>" +
                     "<tr><th>№ п/п</th><th>Дисциплина</th><th>Семестр</th><th>Количество недель</th><th>Преподаватель</th><th>Экзаменац. отметки</th><th>Дата сдачи</th></tr>";
